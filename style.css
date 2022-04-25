@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/* custom properties */
+:root {
+		--darkCyan: hsl(185, 75%, 39%);
+		--darkBlue: hsl(229, 23%, 23%);
+		--grayBlue: hsl(227, 10%, 46%);
+		--darkGray: hsl(0, 0%, 59%);
+		--white: hsl(0, 0%, 100%);
+		--fontNormal: 400;
+		--fontBold: 700;
+		--bgImages: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+		--cardShadow: 0 10px 20px 10px hsla(0, 0%, 0%, 0.1);
+}
+
+/* main css */
+*, *::before, *::after {
+		box-sizing: border-box;
+		margin: 0;
+}
+body {
+		font-family: 'Kumbh Sans', sans-serif;
+		font-weight: var(--fontNormal);
+}
+main {
+		
+}
+.flex-wrap {
+		min-width: 100vw;
+		min-height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+}
+.card {
+		width: 90%;
+		max-width: 330px;
+		background-color: var(--white);
+		background-image: url('images/bg-pattern-card.svg');
+		background-repeat: no-repeat;
+		min-height: 50%;
+		border-radius: 15px;
+		box-shadow: var(--cardShadow);
+}
+.profile {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 25%;
+		border-bottom: 0.5px solid var(--darkGray);
+}
+.profilepic {
+		border-radius: 50%;
+		border: solid 5px var(--white);
+}
+.profilename {
+		text-align: center;
+		padding: 1em 0;
+		line-height: 1.6;
+}
+.profilename strong {
+		color: var(--darkBlue);
+		font-weight: var(--fontBold);
+		font-size: 1.2em;
+}
+.profilename span {
+		color: var(--grayBlue);
+		font-weight: var(--fontNormal);
+		font-size: 1.2em;
+}
+.profilename p {
+		font-size: 0.9em;
+		padding-bottom: 0.5em;
+}
+.stats {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		text-align: center;
+		padding: 1.2em 0;
+		line-height: 1.6;
+}
+.stats ul {
+		color: var(--darkBlue);
+		font-weight: var(--fontBold);
+		font-size: 1.1em;
+		padding: 0;		
+}
+.stats ul li {
+		color: var(--grayBlue);
+		font-weight: var(--fontNormal);
+		font-size: 0.625em;
+		list-style: none;
+		letter-spacing: 0.1em;
+}
+
+/* graphics */
+.flex-wrap {
+		color: var(--grayBlue);
+		background-color: var(--darkCyan);
+		background-image: url('images/bg-pattern-top.svg'), url('images/bg-pattern-bottom.svg');
+		background-repeat: no-repeat;
+		background-position: right 52vw bottom 35vh, left 49vw top 49vh; /* this will push the images to corners */
+}
